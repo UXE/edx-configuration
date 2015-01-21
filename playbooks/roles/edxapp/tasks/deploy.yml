@@ -358,12 +358,12 @@
   tags:
   - edxapp-sandbox
 
-- name: compiling all py files in the edx-platform repo
-  shell: "{{ edxapp_venv_bin }}/python -m compileall -x .git/.* {{ edxapp_code_dir }}"
-  sudo_user: "{{ edxapp_user }}"
-  notify:
-  - "restart edxapp"
-  - "restart edxapp_workers"
+# - name: compiling all py files in the edx-platform repo
+#   shell: "{{ edxapp_venv_bin }}/python -m compileall -x .git/.* {{ edxapp_code_dir }}"
+#   sudo_user: "{{ edxapp_user }}"
+#   notify:
+#   - "restart edxapp"
+#   - "restart edxapp_workers"
 
   # alternative would be to give {{ common_web_user }} read access
   # to the virtualenv but that permission change will require
